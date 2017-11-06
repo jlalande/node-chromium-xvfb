@@ -13,6 +13,6 @@ RUN \
   rm -rf /var/lib/apt/lists/*
 
 ADD xvfb-chromium /usr/bin/xvfb-chromium
-RUN ln -s /usr/bin/xvfb-chromium /usr/bin/google-chrome && ln -s /usr/bin/xvfb-chromium /usr/bin/chromium-browser && chmod a+x /usr/bin/xvfb-chromium
+RUN ln -sf /usr/bin/xvfb-chromium /usr/bin/google-chrome && ln -s /usr/bin/xvfb-chromium /usr/bin/chromium-browser && chmod a+x /usr/bin/xvfb-chromium
 
 ENV CHROME_BIN /usr/bin/google-chrome
